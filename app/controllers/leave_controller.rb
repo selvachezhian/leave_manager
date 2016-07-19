@@ -1,28 +1,10 @@
 class LeaveController < ApplicationController
   before_action :set_leave, only: [:show, :edit, :update, :destroy]
 
-  # GET /leave
-  # GET /leave.json
   def index
-    @leaves = Leave.all
+
   end
 
-  # GET /leave/1
-  # GET /leave/1.json
-  def show
-  end
-
-  # GET /leave/new
-  def new
-    @leave = Leave.new
-  end
-
-  # GET /leave/1/edit
-  def edit
-  end
-
-  # POST /leave
-  # POST /leave.json
   def add_leave
     @leave = Leave.new(leave_params)
 
