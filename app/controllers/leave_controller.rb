@@ -6,7 +6,7 @@ class LeaveController < ApplicationController
   end
 
   def add_leave
-    @leave = Leave.new(leave_params)
+    @leave = current_user.leave.new(leave_params)
 
     respond_to do |format|
       if @leave.save
